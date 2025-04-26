@@ -5,8 +5,8 @@
 This project serves as the backend for a YouTube-like platform, providing APIs for managing channels like adding, deleting, updating, subscribers, and subscriptions of a channel.
 
 ## Live
-- It is deployed on Vercel [Live Link](https://youtube-backend-anurag.vercel.app/).
-- https://youtube-backend-anurag.vercel.app/
+- It is deployed on Vercel [Live Link](https://youtube-subscriber-backened-mithilesh.vercel.app/).
+- https://youtube-subscriber-backened-mithilesh.vercel.app/
 
 ## Table of Contents
 
@@ -46,10 +46,10 @@ This project serves as the backend for a YouTube-like platform, providing APIs f
 
 | SN | Route | Method | Details |
 |----|-------|--------|---------|
-| 1  | [/yt/all](https://youtube-backend-anurag.vercel.app/yt/all) | GET | Get all channels |
-| 2  | [/yt/names](https://youtube-backend-anurag.vercel.app/yt/names) | GET | Get all channel names |
-| 3  | [/yt/:channelId/subscribers](https://youtube-backend-anurag.vercel.app/yt/:channelId/subscribers) | GET | Get all subscribers of a channel |
-| 4  | [/yt/:channelId/subscriptions](https://youtube-backend-anurag.vercel.app/yt/:channelId/subscriptions) | GET | Get all subscriptions of a channel |
+| 1  | [/yt/all](https://youtube-subscriber-backened-mithilesh.vercel.app/yt/all) | GET | Get all channels |
+| 2  | [/yt/names](https://youtube-subscriber-backened-mithilesh.vercel.app/yt/names) | GET | Get all channel names |
+| 3  | [/yt/:channelId/subscribers](https://youtube-subscriber-backened-mithilesh.vercel.app/yt/:channelId/subscribers) | GET | Get all subscribers of a channel |
+| 4  | [/yt/:channelId/subscriptions](https://youtube-subscriber-backened-mithilesh.vercel.app/yt/:channelId/subscriptions) | GET | Get all subscriptions of a channel |
 | 5  | /yt/:channelId/subscribe | POST | Subscribe to a channel |
 | 6  | /yt/addChannel | POST | Add a new channel |
 | 7  | /channelId/delete | DELETE | Delete a channel |
@@ -87,7 +87,7 @@ This project serves as the backend for a YouTube-like platform, providing APIs f
 
 ## Contributors
 
-- [Anurag Affection](https://github.com/anuragaffection)
+- [Mithilesh Yadav](https://github.com/mky120799)
 - You are welcome to contribute here!
 
 ## License
