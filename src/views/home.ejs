@@ -1,26 +1,28 @@
 <%- include('./partials/navbar.ejs') %>
 
-    <div class="bg-gray-900 text-gray-200 p-4 flex flex-col gap-6">
-        <h1 class="p-4 text-3xl font-semibold text-amber-500">Hi, Explore the variety of channels </h1>
+    <div class="bg-indigo-900 text-gray-200 p-4 flex flex-col gap-6">
+        <h1 class="p-4 text-3xl font-semibold text-pink-300">Hi, Explore the variety of channels </h1>
         <% if (locals.allChannels) { %>
-            <div class="flex flex-wrap gap-10  p-4">
-                <% allChannels.forEach(element=> { %>
-                    <div onclick="redirectToChannel('<%= element._id %>')"
-                        class="flex flex-col gap-3 bg-gray-950 hover:bg-black border border-cyan-600 hover:border-cyan-400 cursor-pointer rounded-lg py-4 px-8">
-                        <div
-                            class="px-4 py-2 bg-gradient-to-r from-lime-600 to-amber-600 text-gray-950 text-lg text-center font-bold rounded-lg w-full">
-                            <%= element.channelName %>
-                        </div>
-                        <div class="flex flex-col gap-2 px-1">
-                            <div> Subscribers : <%= element.subscribers.length %>
+            <div data-aos="fade-up">
+                <div class="flex flex-wrap gap-10  p-4">
+                    <% allChannels.forEach(element=> { %>
+                        <div onclick="redirectToChannel('<%= element._id %>')"
+                            class="flex flex-col gap-3 bg-indigo-950 hover:bg-indigo-800 border border-pink-600 hover:border-pink-400 cursor-pointer rounded-lg py-4 px-8 transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            <div
+                                class="px-4 py-2 bg-gradient-to-r from-pink-400 to-rose-500 text-white text-lg text-center font-bold rounded-lg w-full">
+                                <%= element.channelName %>
                             </div>
-                            <div> Subscriptions : <%= element.subscriptions.length %>
+                            <div class="flex flex-col gap-2 px-1">
+                                <div> Subscribers : <%= element.subscribers.length %>
+                                </div>
+                                <div> Subscriptions : <%= element.subscriptions.length %>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <% }) %>
+                </div>
             </div>
-            <% } %>
+        <% } %>
     </div>
 
     <script>
@@ -33,6 +35,10 @@
         }
     </script>
 
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <%- include('./partials/footer.ejs') %>

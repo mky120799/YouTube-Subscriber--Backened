@@ -26,6 +26,7 @@ async function addChannel(req, res) {
 
 async function getAllChannels(req, res) {
     const allChannels = await channels.find({});
+    console.log(allChannels);
     return res.render('home', {
         allChannels: allChannels
     })

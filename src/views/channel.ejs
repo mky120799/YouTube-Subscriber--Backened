@@ -1,28 +1,28 @@
 <%- include('./partials/navbar.ejs') %>
 
-    <div class="bg-gray-900 text-gray-200 p-4">
+    <div class="bg-indigo-900 text-gray-200 p-4">
 
-        <div class="p-4 text-3xl text-amber-500 font-semibold"> My Channel </div>
+        <div class="p-4 text-3xl text-pink-300 font-semibold"> My Channel </div>
         <div class="p-4 flex ">
             <% if (locals.channelDetails) { %>
-                <div class="p-8 flex flex-wrap gap-8 bg-gray-950 rounded-lg">
+                <div class="p-8 flex flex-wrap gap-8 bg-indigo-950 rounded-lg shadow-lg hover:shadow-xl">
                     <div class="flex flex-col justify-center items-center gap-2 ">
                         <div
-                            class="px-4 py-2 bg-gradient-to-r from-lime-600 to-amber-600 text-gray-950 text-lg text-center font-bold rounded-lg w-full">
+                            class="px-4 py-2 bg-gradient-to-r from-pink-400 to-rose-500 text-white text-lg text-center font-bold rounded-lg w-full">
                             <%= channelDetails.channelName %>
                         </div>
                         <div> Name </div>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-2 ">
                         <div
-                            class="px-4 py-2 bg-gradient-to-r from-lime-600 to-amber-600 text-gray-950 text-lg text-center font-bold rounded-lg w-full">
+                            class="px-4 py-2 bg-gradient-to-r from-pink-400 to-rose-500 text-white text-lg text-center font-bold rounded-lg w-full">
                             <%= channelDetails.subscribers.length %>
                         </div>
                         <div> Subscribers</div>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-2 ">
                         <div
-                            class="px-4 py-2 bg-gradient-to-r from-lime-600 to-amber-600 text-gray-950 text-lg text-center font-bold rounded-lg w-full">
+                            class="px-4 py-2 bg-gradient-to-r from-pink-400 to-rose-500 text-white text-lg text-center font-bold rounded-lg w-full">
                             <%= channelDetails.subscriptions.length %>
                         </div>
                         <div> Subscriptions</div>
@@ -31,7 +31,7 @@
                         <% const options={ day: '2-digit' , month: 'long' , year: 'numeric' }; const
                             formattedDate=channelDetails.addedAt.toLocaleDateString(undefined, options); %>
                             <div
-                                class="px-4 py-2 bg-gradient-to-r from-lime-600 to-amber-600 text-gray-950 text-lg text-center font-bold rounded-lg w-full">
+                                class="px-4 py-2 bg-gradient-to-r from-pink-400 to-rose-500 text-white text-lg text-center font-bold rounded-lg w-full">
                                 <%= formattedDate %>
                             </div>
                             <div> Added At </div>
@@ -47,19 +47,19 @@
 
         </div> -->
 
-        <div class="p-4 text-3xl text-amber-500 font-semibold"> Subscribe More Channels </div>
+        <div class="p-4 text-3xl text-pink-300 font-semibold"> Subscribe More Channels </div>
         <div class="p-4 ">
             <% if (locals.channelsToSubscribe) { %>
                 <div class="flex flex-wrap gap-8 ">
                     <% channelsToSubscribe.forEach(element=> { %>
                         <div
-                            class="py-4 px-6 flex flex-col gap-4 bg-gray-950 hover:bg-black rounded-lg">
+                            class="py-4 px-6 flex flex-col gap-4 bg-indigo-950 hover:bg-indigo-800 rounded-lg shadow-lg hover:shadow-xl">
                             <div
-                                class="px-4 py-2 bg-gradient-to-r from-lime-600 to-amber-600 text-gray-950 text-lg text-center font-semibold rounded-lg w-full">
+                                class="px-4 py-2 bg-gradient-to-r from-pink-400 to-rose-500 text-white text-lg text-center font-semibold rounded-lg w-full">
                                 <%= element.channelName %>
                             </div>
                             <button type="text" onclick="subscribeToChannel('<%= channelDetails._id %>','<%= element._id %>')"
-                                class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Subscribe</button>
+                                class="px-4 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 focus:outline-none focus:bg-emerald-600 transition duration-300 ease-in-out">Subscribe</button>
                         </div>
                         <% }) %>
                 </div>
