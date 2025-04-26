@@ -1,4 +1,4 @@
-const channels = require('../models/subscribeModels.js')
+const channels = require('../models/subscribeModels.js');
 
 async function addChannel(req, res) {
     try {
